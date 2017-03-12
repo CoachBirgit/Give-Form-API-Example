@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Give - Form API Example
  * Plugin URI: https://github.com/WordImpress/Give-Form-API-Example
@@ -53,7 +54,7 @@ class Give_Form_API_Example {
 	 * @access public
 	 */
 	public function init() {
-		add_filter( 'give_form_api_register_form', array( $this, 'render_all_form_elements' ) );
+		add_filter( 'give_form_api_register_form', array( $this, 'register_forms' ) );
 	}
 
 
@@ -62,85 +63,18 @@ class Give_Form_API_Example {
 	 *
 	 * @since  1.0
 	 * @access public
+	 *
+	 * @param array $forms
+	 *
 	 * @return array
 	 */
-	public function render_all_form_elements() {
-		$forms['form-elements'] = array(
-			'fields' => array(
-				'text-field'         => array(
-					'type'             => 'text',
-					'label'            => __( 'Text Field' ),
-					'field_attributes' => array(
-						'placeholder' => __( 'Text Field' ),
-					),
-				),
-				'email-field'        => array(
-					'type'             => 'email',
-					'label'            => __( 'Email Field' ),
-					'field_attributes' => array(
-						'placeholder' => __( 'Email Field' ),
-					),
-				),
-				'number-field'       => array(
-					'type'             => 'number',
-					'label'            => __( 'Number Field' ),
-					'field_attributes' => array(
-						'placeholder' => __( 'Number Field' ),
-					),
-				),
-				'password-field'     => array(
-					'type'             => 'password',
-					'label'            => __( 'Password Field' ),
-					'field_attributes' => array(
-						'placeholder' => __( 'Password Field' ),
-					),
-				),
-				'textarea-field'     => array(
-					'type'             => 'textarea',
-					'label'            => __( 'Textarea Field' ),
-					'field_attributes' => array(
-						'placeholder' => __( 'Textarea Field' ),
-					),
-				),
-				'select-field'       => array(
-					'type'    => 'select',
-					'label'   => __( 'Select Field' ),
-					'options' => array(
-						'option-1' => __( 'Option 1' ),
-						'option-2' => __( 'Option 2' ),
-						'option-3' => __( 'Option 3' ),
-					),
-				),
-				'multi-select-field' => array(
-					'type'    => 'multi_select',
-					'label'   => __( 'Multi Select Field' ),
-					'options' => array(
-						'option-1' => __( 'Option 1' ),
-						'option-2' => __( 'Option 2' ),
-						'option-3' => __( 'Option 3' ),
-					),
-				),
-				'radio-field'        => array(
-					'type'    => 'radio',
-					'label'   => __( 'Radio Field' ),
-					'options' => array(
-						'option-1' => __( 'Option 1' ),
-						'option-2' => __( 'Option 2' ),
-						'option-3' => __( 'Option 3' ),
-					),
-				),
-				'checkbox-field'     => array(
-					'type'           => 'checkbox',
-					'label'          => __( 'Checkbox Field' ),
-					'label_position' => 'after',
-				),
-
-				'submit' => array(
-					'type'  => 'submit',
-					'value' => __( 'Submit' ),
-				),
-			),
-		);
+	public function register_forms( $forms ) {
+		include 'includes/forms/form-all-fields.php';
+		include 'includes/forms/form-display-style-reveal.php';
+		include 'includes/forms/form-display-style-modal.php';
+		include 'includes/forms/form-display-style-button.php';
+		include 'includes/forms/form-display-style-stepper.php';
+		include 'includes/forms/form-section-simple.php';
 
 		return $forms;
 	}
