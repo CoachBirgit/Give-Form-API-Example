@@ -75,6 +75,7 @@ class Give_Form_API_Example {
 		include 'includes/forms/form-display-style-button.php';
 		include 'includes/forms/form-display-style-stepper.php';
 		include 'includes/forms/form-section-simple.php';
+		include 'includes/forms/form-nested-sections.php';
 
 		return $forms;
 	}

@@ -1,5 +1,5 @@
 <?php
-$forms['form-section-simple-2'] = array(
+$forms['form-section-simple'] = array(
 	'fields' => array(
 		'custom-amount'        => array(
 			'type'               => 'text',
