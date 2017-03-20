@@ -65,6 +65,7 @@ $forms['all-elements'] = array(
 		),
 		'checkbox-field'       => array(
 			'type'           => 'checkbox',
+			// 'cbvalue'        => '1',
 			'label'          => __( 'Checkbox Field' ),
 			'label_position' => 'after',
 		),
