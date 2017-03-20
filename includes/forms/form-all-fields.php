@@ -1,42 +1,42 @@
 <?php
 $forms['all-elements'] = array(
 	'fields' => array(
-		'text-field' => array(
-			'type'               => 'text',
-			'label'              => __( 'Text Field' ),
-			'field_attributes'   => array(
+		'text-field'           => array(
+			'type'             => 'text',
+			'label'            => __( 'Text Field' ),
+			'field_attributes' => array(
 				'placeholder' => __( 'Text Field' ),
 			),
 		),
-		'email-field'        => array(
+		'email-field'          => array(
 			'type'             => 'email',
 			'label'            => __( 'Email Field' ),
 			'field_attributes' => array(
 				'placeholder' => __( 'Email Field' ),
 			),
 		),
-		'number-field'       => array(
+		'number-field'         => array(
 			'type'             => 'number',
 			'label'            => __( 'Number Field' ),
 			'field_attributes' => array(
 				'placeholder' => __( 'Number Field' ),
 			),
 		),
-		'password-field'     => array(
+		'password-field'       => array(
 			'type'             => 'password',
 			'label'            => __( 'Password Field' ),
 			'field_attributes' => array(
 				'placeholder' => __( 'Password Field' ),
 			),
 		),
-		'textarea-field'     => array(
+		'textarea-field'       => array(
 			'type'             => 'textarea',
 			'label'            => __( 'Textarea Field' ),
 			'field_attributes' => array(
 				'placeholder' => __( 'Textarea Field' ),
 			),
 		),
-		'select-field'       => array(
+		'select-field'         => array(
 			'type'    => 'select',
 			'label'   => __( 'Select Field' ),
 			'options' => array(
@@ -45,7 +45,7 @@ $forms['all-elements'] = array(
 				'option-3' => __( 'Option 3' ),
 			),
 		),
-		'multi-select-field' => array(
+		'multi-select-field'   => array(
 			'type'    => 'multi_select',
 			'label'   => __( 'Multi Select Field' ),
 			'options' => array(
@@ -54,7 +54,7 @@ $forms['all-elements'] = array(
 				'option-3' => __( 'Option 3' ),
 			),
 		),
-		'radio-field'        => array(
+		'radio-field'          => array(
 			'type'    => 'radio',
 			'label'   => __( 'Radio Field' ),
 			'options' => array(
@@ -63,13 +63,26 @@ $forms['all-elements'] = array(
 				'option-3' => __( 'Option 3' ),
 			),
 		),
-		'checkbox-field'     => array(
+		'checkbox-field'       => array(
 			'type'           => 'checkbox',
 			'label'          => __( 'Checkbox Field' ),
 			'label_position' => 'after',
 		),
-
-		'submit' => array(
+		'multi-checkbox-field' => array(
+			'type'    => 'multi_checkbox',
+			'label'   => __( 'Multi Checkbox Field' ),
+			'options' => array(
+				'daily'  => __( 'Daily' ),
+				'hourly' => __( 'Hourly' ),
+				'weekly' => __( 'Weekly' ),
+			),
+		),
+		'hidden-field'         => array(
+			'type'    => 'hidden',
+			'name'    => '_give_form_id',
+			'default' => 2839,
+		),
+		'submit'               => array(
 			'type'  => 'submit',
 			'value' => __( 'Submit' ),
 		),
