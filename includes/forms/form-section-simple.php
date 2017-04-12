@@ -1,5 +1,5 @@
 <?php
-$forms['form-section-simple'] = array(
+Give_Form_API::register_form(array(
 	'fields' => array(
 		'custom-amount'        => array(
 			'type'               => 'text',
@@ -129,4 +129,4 @@ $forms['form-section-simple'] = array(
 			'value' => __( 'Submit' ),
 		),
 	),
-);
+), 'form-section-simple' );

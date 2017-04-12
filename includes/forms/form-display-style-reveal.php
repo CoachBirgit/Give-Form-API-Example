@@ -1,12 +1,12 @@
 <?php
-$forms['form-reveal'] = array(
-	'display_style' => 'reveal',
-	'continue_button_title' => __( 'Reveal Form'),
-	'fields' => array(
-		'text-field' => array(
-			'type'               => 'text',
-			'label'              => __( 'Text Field' ),
-			'field_attributes'   => array(
+Give_Form_API::register_form( array(
+	'display_style'         => 'reveal',
+	'continue_button_title' => __( 'Reveal Form' ),
+	'fields'                => array(
+		'text-field'         => array(
+			'type'             => 'text',
+			'label'            => __( 'Text Field' ),
+			'field_attributes' => array(
 				'placeholder' => __( 'Text Field' ),
 			),
 		),
@@ -76,4 +76,4 @@ $forms['form-reveal'] = array(
 			'value' => __( 'Submit' ),
 		),
 	),
-);
+), 'form-reveal' );

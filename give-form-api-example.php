@@ -54,7 +54,7 @@ class Give_Form_API_Example {
 	 * @access public
 	 */
 	public function init() {
-		add_filter( 'give_form_api_register_form', array( $this, 'register_forms' ) );
+		add_action( 'give_forms_api_loaded', array( $this, 'register_forms' ) );
 	}
 
 
@@ -64,20 +64,16 @@ class Give_Form_API_Example {
 	 * @since  1.0
 	 * @access public
 	 *
-	 * @param array $forms
-	 *
 	 * @return array
 	 */
-	public function register_forms( $forms ) {
-		include 'includes/forms/form-all-fields.php';
-		include 'includes/forms/form-display-style-reveal.php';
-		include 'includes/forms/form-display-style-modal.php';
-		include 'includes/forms/form-display-style-button.php';
-		include 'includes/forms/form-display-style-stepper.php';
-		include 'includes/forms/form-section-simple.php';
-		include 'includes/forms/form-nested-sections.php';
-
-		return $forms;
+	public function register_forms() {
+		require_once 'includes/forms/form-all-fields.php';
+		require_once 'includes/forms/form-display-style-reveal.php';
+		require_once 'includes/forms/form-display-style-modal.php';
+		require_once 'includes/forms/form-display-style-button.php';
+		require_once 'includes/forms/form-display-style-stepper.php';
+		require_once 'includes/forms/form-section-simple.php';
+		require_once 'includes/forms/form-nested-sections.php';
 	}
 }
 

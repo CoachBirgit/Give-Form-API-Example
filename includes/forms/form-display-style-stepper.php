@@ -1,5 +1,5 @@
 <?php
-$forms['form-section-simple'] = array(
+Give_Form_API::register_form( array(
 	'display_style' => 'stepper',
 	'fields'        => array(
 		'step-1' => array(
@@ -146,4 +146,4 @@ $forms['form-section-simple'] = array(
 			),
 		),
 	),
-);
+), 'form-section-simple' );

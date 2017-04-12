@@ -1,43 +1,43 @@
 <?php
-$forms['form-button'] = array(
+Give_Form_API::register_form( array(
 	'display_style' => 'button',
-	'fields' => array(
-		'text-field' => array(
-			'type'               => 'text',
-			'label'              => __( 'Text Field' ),
-			'field_attributes'   => array(
+	'fields'        => array(
+		'text-field'             => array(
+			'type'             => 'text',
+			'label'            => __( 'Text Field' ),
+			'field_attributes' => array(
 				'placeholder' => __( 'Text Field' ),
 			),
 		),
-		'email-field'        => array(
+		'email-field'            => array(
 			'type'             => 'email',
 			'label'            => __( 'Email Field' ),
 			'field_attributes' => array(
 				'placeholder' => __( 'Email Field' ),
 			),
 		),
-		'number-field'       => array(
+		'number-field'           => array(
 			'type'             => 'number',
 			'label'            => __( 'Number Field' ),
 			'field_attributes' => array(
 				'placeholder' => __( 'Number Field' ),
 			),
 		),
-		'password-field'     => array(
+		'password-field'         => array(
 			'type'             => 'password',
 			'label'            => __( 'Password Field' ),
 			'field_attributes' => array(
 				'placeholder' => __( 'Password Field' ),
 			),
 		),
-		'textarea-field'     => array(
+		'textarea-field'         => array(
 			'type'             => 'textarea',
 			'label'            => __( 'Textarea Field' ),
 			'field_attributes' => array(
 				'placeholder' => __( 'Textarea Field' ),
 			),
 		),
-		'select-field'       => array(
+		'select-field'           => array(
 			'type'    => 'select',
 			'label'   => __( 'Select Field' ),
 			'options' => array(
@@ -46,7 +46,7 @@ $forms['form-button'] = array(
 				'option-3' => __( 'Option 3' ),
 			),
 		),
-		'multi-select-field' => array(
+		'multi-select-field'     => array(
 			'type'    => 'multi_select',
 			'label'   => __( 'Multi Select Field' ),
 			'options' => array(
@@ -55,7 +55,7 @@ $forms['form-button'] = array(
 				'option-3' => __( 'Option 3' ),
 			),
 		),
-		'radio-field'        => array(
+		'radio-field'            => array(
 			'type'    => 'radio',
 			'label'   => __( 'Radio Field' ),
 			'options' => array(
@@ -64,7 +64,7 @@ $forms['form-button'] = array(
 				'option-3' => __( 'Option 3' ),
 			),
 		),
-		'checkbox-field'     => array(
+		'checkbox-field'         => array(
 			'type'           => 'checkbox',
 			'label'          => __( 'Checkbox Field' ),
 			'label_position' => 'after',
@@ -73,7 +73,7 @@ $forms['form-button'] = array(
 		// Repeater field.
 		'repeater_field_setting' => array(
 			'id'          => 'repeater_field_setting',
-			'label'        => esc_html__( 'Repeater Field', 'give' ),
+			'label'       => esc_html__( 'Repeater Field', 'give' ),
 			'type'        => 'group',
 			'description' => esc_html__( 'This is repeater field.', 'give' ),
 			'options'     => array(
@@ -87,23 +87,23 @@ $forms['form-button'] = array(
 
 			'fields' => array(
 				array(
-					'label' => esc_html__( 'Text', 'give' ),
-					'id'   => 'text',
-					'type' => 'text',
+					'label'   => esc_html__( 'Text', 'give' ),
+					'id'      => 'text',
+					'type'    => 'text',
 					'default' => 'ram',
 				),
 				array(
 					'label' => esc_html__( 'Textarea', 'give' ),
-					'id'   => 'textarea',
-					'type' => 'textarea',
+					'id'    => 'textarea',
+					'type'  => 'textarea',
 				),
 				array(
 					'label' => esc_html__( 'Checkbox', 'give' ),
-					'id'   => 'checkbox',
-					'type' => 'checkbox',
+					'id'    => 'checkbox',
+					'type'  => 'checkbox',
 				),
 				array(
-					'label'    => esc_html__( 'Select', 'give' ),
+					'label'   => esc_html__( 'Select', 'give' ),
 					'id'      => 'select',
 					'type'    => 'select',
 					'default' => 'option3',
@@ -114,7 +114,7 @@ $forms['form-button'] = array(
 					),
 				),
 				array(
-					'label'    => esc_html__( 'Radio', 'give' ),
+					'label'   => esc_html__( 'Radio', 'give' ),
 					'id'      => 'radio',
 					'type'    => 'radio',
 					'default' => 'option1',
@@ -125,7 +125,7 @@ $forms['form-button'] = array(
 					),
 				),
 				array(
-					'label'    => esc_html__( 'Radio Inline', 'give' ),
+					'label'   => esc_html__( 'Radio Inline', 'give' ),
 					'id'      => 'radio_inline',
 					'type'    => 'radio_inline',
 					'default' => 'option3',
@@ -170,4 +170,4 @@ $forms['form-button'] = array(
 			'value' => __( 'Submit' ),
 		),
 	),
-);
+), 'form-buttom' );

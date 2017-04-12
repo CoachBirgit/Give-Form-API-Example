@@ -1,12 +1,12 @@
 <?php
-$forms['form-modal'] = array(
-	'display_style' => 'modal',
-	'continue_button_title' => _( 'Modal Form'),
-	'fields' => array(
-		'text-field' => array(
-			'type'               => 'text',
-			'label'              => __( 'Text Field' ),
-			'field_attributes'   => array(
+Give_Form_API::register_form( array(
+	'display_style'         => 'modal',
+	'continue_button_title' => _( 'Modal Form' ),
+	'fields'                => array(
+		'text-field'         => array(
+			'type'             => 'text',
+			'label'            => __( 'Text Field' ),
+			'field_attributes' => array(
 				'placeholder' => __( 'Text Field' ),
 			),
 		),
@@ -76,4 +76,4 @@ $forms['form-modal'] = array(
 			'value' => __( 'Submit' ),
 		),
 	),
-);
+), 'form-modal' );

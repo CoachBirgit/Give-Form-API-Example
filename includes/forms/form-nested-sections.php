@@ -1,5 +1,5 @@
 <?php
-$forms['form-nested-sections'] = array(
+Give_Form_API::register_form( array(
 	'fields' => array(
 		'custom-amount'        => array(
 			'type'               => 'text',
@@ -29,9 +29,9 @@ $forms['form-nested-sections'] = array(
 					'label'  => __( 'Gender' ),
 					'fields' => array(
 						'gateway' => array(
-							'type'    => 'radio',
+							'type'         => 'radio',
 							'wrapper_type' => 'span',
-							'options' => array(
+							'options'      => array(
 								'male'   => __( 'Male' ),
 								'female' => __( 'Female' ),
 								'other'  => __( 'Other' ),
@@ -143,4 +143,4 @@ $forms['form-nested-sections'] = array(
 			'value' => __( 'Submit' ),
 		),
 	),
-);
+), 'form-nested-sections' );

@@ -1,5 +1,5 @@
 <?php
-$forms['all-elements'] = array(
+Give_Form_API::register_form( array(
 	'sort_by_priority' => true,
 	'fields'           => array(
 		'text-field'                    => array(
@@ -236,4 +236,4 @@ $forms['all-elements'] = array(
 			'priority' => 14,
 		),
 	),
-);
+), 'all-elements' );
