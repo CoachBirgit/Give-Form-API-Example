@@ -170,4 +170,4 @@ Give_Form_API::register_form( array(
 			'value' => __( 'Submit' ),
 		),
 	),
-), 'form-buttom' );
+), 'form-button' );
